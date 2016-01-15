@@ -1,5 +1,4 @@
-#include "EaseExponentialIn.h"
-#include "EaseExponentialOut.h"
+#include "EaseExponential.h"
 
 EaseExponentialIn::EaseExponentialIn()
 {
