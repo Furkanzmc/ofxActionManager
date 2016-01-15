@@ -1,7 +1,7 @@
 # ofxActionManager
 
 ofxActionManager is a port of the action system used by [Cocos2dx](https://github.com/cocos2d/cocos2d-x).
-The usage is pretty much the same as Cocos2dx. The only difference is you need to inherit `ActionTarget`, or just use it directly for Actions.
+The usage is pretty much the same as Cocos2dx. The only difference is All the actions work on `ActionTarget` so you need to use that, or inherit it for Actions.
 You can read about actions [here](http://www.cocos2d-x.org/wiki/Actions)
 
 ```C++
