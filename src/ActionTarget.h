@@ -9,8 +9,8 @@ class ActionTarget
 public:
     ActionTarget();
 
-    ofVec3f getPositon() const;
-    void setPositon(const ofVec3f &positon);
+    ofVec3f getPosition() const;
+    void setPosition(const ofVec3f &positon);
 
     ofVec3f getScale() const;
     void setScale(const ofVec3f &scale);
@@ -26,7 +26,7 @@ public:
     void release();
 
 protected:
-    ofVec3f m_Positon;
+    ofVec3f m_Position;
     ofVec3f m_Scale;
     ofVec3f m_Rotation;
     ofColor m_Color;

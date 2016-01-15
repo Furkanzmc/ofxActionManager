@@ -6,14 +6,14 @@ ActionTarget::ActionTarget()
 
 }
 
-ofVec3f ActionTarget::getPositon() const
+ofVec3f ActionTarget::getPosition() const
 {
-    return m_Positon;
+    return m_Position;
 }
 
-void ActionTarget::setPositon(const ofVec3f &positon)
+void ActionTarget::setPosition(const ofVec3f &positon)
 {
-    m_Positon = positon;
+    m_Position = positon;
 }
 
 ofVec3f ActionTarget::getScale() const

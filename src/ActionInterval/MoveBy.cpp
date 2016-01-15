@@ -52,7 +52,7 @@ MoveBy *MoveBy::clone() const
 void MoveBy::startWithTarget(ActionTarget *target)
 {
     ActionInterval::startWithTarget(target);
-    m_PreviousPosition = m_StartPosition = target->getPositon();
+    m_PreviousPosition = m_StartPosition = target->getPosition();
 }
 
 MoveBy *MoveBy::reverse() const
@@ -63,6 +63,6 @@ MoveBy *MoveBy::reverse() const
 void MoveBy::update(float t)
 {
     if (isStopped() == false) {
-        m_Target->setPositon(m_StartPosition + m_PositionDelta * t);
+        m_Target->setPosition(m_StartPosition + m_PositionDelta * t);
     }
 }

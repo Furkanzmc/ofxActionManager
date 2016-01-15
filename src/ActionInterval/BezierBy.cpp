@@ -26,7 +26,7 @@ bool BezierBy::initWithDuration(float t, const BezierConfig &c)
 void BezierBy::startWithTarget(ActionTarget *target)
 {
     ActionInterval::startWithTarget(target);
-    m_PreviousPosition = m_StartPosition = target->getPositon();
+    m_PreviousPosition = m_StartPosition = target->getPosition();
 }
 
 BezierBy *BezierBy::clone() const
@@ -53,12 +53,12 @@ void BezierBy::update(float time)
         float x = bezierat(xa, xb, xc, xd, time);
         float y = bezierat(ya, yb, yc, yd, time);
 
-        const ofVec2f currentPos = m_Target->getPositon();
+        const ofVec2f currentPos = m_Target->getPosition();
         const ofVec2f diff = currentPos - m_PreviousPosition;
         m_StartPosition = m_StartPosition + diff;
 
         const ofVec2f newPos = m_StartPosition + ofVec2f(x, y);
-        m_Target->setPositon(newPos);
+        m_Target->setPosition(newPos);
 
         m_PreviousPosition = newPos;
     }

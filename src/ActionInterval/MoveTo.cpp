@@ -55,7 +55,7 @@ MoveTo *MoveTo::clone() const
 void MoveTo::startWithTarget(ActionTarget *target)
 {
     MoveBy::startWithTarget(target);
-    m_PositionDelta = m_EndPosition - target->getPositon();
+    m_PositionDelta = m_EndPosition - target->getPosition();
 }
 
 MoveTo *MoveTo::reverse() const
