@@ -27,7 +27,7 @@ THE SOFTWARE.
 
 #ifndef MOVEBY_H
 #define MOVEBY_H
-#include "../ActionInterval.h"
+#include "ActionInterval.h"
 
 /** @class MoveBy
  * @brief Moves a Node object x,y pixels by modifying it's position attribute.
@@ -83,6 +83,62 @@ protected:
 
 private:
     DISALLOW_COPY_AND_ASSIGN(MoveBy);
+};
+
+// MoveTo
+
+/** @class MoveTo
+ * @brief Moves a Node object to the position x,y. x and y are absolute coordinates by modifying it's position attribute.
+ Several MoveTo actions can be concurrently called, and the resulting
+ movement will be the sum of individual movements.
+ */
+class MoveTo : public MoveBy
+{
+public:
+    /**
+     * Creates the action.
+     * @param duration Duration time, in seconds.
+     * @param position The destination position in 2d.
+     * @return A MoveTo object.
+     */
+    static MoveTo *create(float duration, const ofVec2f &position);
+
+    /**
+     * Creates the action.
+     * @param duration Duration time, in seconds.
+     * @param position The destination position in 3d.
+     * @return A MoveTo object.
+     */
+    static MoveTo *create(float duration, const ofVec3f &position);
+
+    //
+    // Overrides
+    //
+    virtual MoveTo *clone() const override;
+    virtual MoveTo *reverse() const  override;
+    virtual void startWithTarget(ActionTarget *target) override;
+
+public:
+    MoveTo();
+    virtual ~MoveTo() {}
+
+    /**
+     * initializes the action
+     * @param duration in seconds
+     */
+    bool initWithDuration(float duration, const ofVec2f &position);
+
+    /**
+     * initializes the action
+     * @param duration in seconds
+     */
+    bool initWithDuration(float duration, const ofVec3f &position);
+
+protected:
+    ofVec3f m_EndPosition;
+
+private:
+    DISALLOW_COPY_AND_ASSIGN(MoveTo);
 };
 
 #endif // MOVEBY_H
