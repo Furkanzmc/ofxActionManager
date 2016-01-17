@@ -30,11 +30,11 @@ void ofApp::mouseReleased(int x, int y, int button)
 ## Interval Actions
 
 - [x] Sequence
-- [ ] Repeat
-- [ ] RepeatForever
-- [ ] Spawn
-- [ ] RotateTo
-- [ ] RotateBy
+- [x] Repeat
+- [x] RepeatForever
+- [x] Spawn
+- [x] RotateTo
+- [x] RotateBy
 - [x] MoveBy
 - [x] MoveTo
 - [ ] SkewTo
@@ -43,14 +43,14 @@ void ofApp::mouseReleased(int x, int y, int button)
 - [ ] JumpTo
 - [x] BezierBy
 - [x] BezierTo
-- [ ] ScaleTo
-- [ ] ScaleBy
+- [x] ScaleTo
+- [x] ScaleBy
 - [ ] Blink
 - [ ] FadeTo
 - [ ] FadeIn
 - [ ] FadeOut
-- [ ] TintTo
-- [ ] TintBy
+- [x] TintTo
+- [x] TintBy
 - [x] DelayTime
 - [ ] ReverseTime
 - [ ] Animate
