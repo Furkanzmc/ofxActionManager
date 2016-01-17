@@ -6,6 +6,11 @@ ActionTarget::ActionTarget()
 
 }
 
+ActionTarget::~ActionTarget()
+{
+
+}
+
 ofVec3f ActionTarget::getPosition() const
 {
     return m_Position;

@@ -8,6 +8,7 @@ class ActionTarget
 {
 public:
     ActionTarget();
+    virtual ~ActionTarget();
 
     ofVec3f getPosition() const;
     void setPosition(const ofVec3f &positon);
