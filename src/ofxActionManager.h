@@ -16,11 +16,13 @@
 #include "ActionInstant/CallFunc.h"
 
 //Action Interval
-#include "ActionInterval/BezierBy.h"
-#include "ActionInterval/BezierTo.h"
+#include "ActionInterval/BezierAction.h"
 #include "ActionInterval/DelayTime.h"
-#include "ActionInterval/MoveBy.h"
-#include "ActionInterval/MoveTo.h"
+#include "ActionInterval/MoveAction.h"
+#include "ActionInterval/Spawn.h"
+#include "ActionInterval/TintAction.h"
+#include "ActionInterval/RotateAction.h"
+#include "ActionInterval/ScaleAction.h"
 #include "ActionInterval/Sequence.h"
 
 //Easings
