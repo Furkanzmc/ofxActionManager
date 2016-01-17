@@ -25,9 +25,67 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 
-#ifndef BEZIERTO_H
-#define BEZIERTO_H
-#include "BezierBy.h"
+#ifndef BEZIERBY_H
+#define BEZIERBY_H
+#include "ActionInterval.h"
+
+/** @struct Bezier configuration structure
+ */
+struct BezierConfig {
+    //! end position of the bezier
+    ofVec2f endPosition;
+    //! Bezier control point 1
+    ofVec2f controlPoint_1;
+    //! Bezier control point 2
+    ofVec2f controlPoint_2;
+};
+
+/** @class BezierBy
+ * @brief An action that moves the target with a cubic Bezier curve by a certain distance.
+ */
+class BezierBy : public ActionInterval
+{
+public:
+    /** Creates the action with a duration and a bezier configuration.
+     * @param t Duration time, in seconds.
+     * @param c Bezier config.
+     * @return A BezierBy object.
+     */
+    static BezierBy *create(float t, const BezierConfig &c);
+
+    //
+    // Overrides
+    //
+    virtual BezierBy *clone() const override;
+    virtual BezierBy *reverse(void) const override;
+    virtual void startWithTarget(ActionTarget *target) override;
+    /**
+     * @param time In seconds.
+     */
+    virtual void update(float time) override;
+
+public:
+    BezierBy();
+    virtual ~BezierBy() {}
+
+    /**
+     * initializes the action with a duration and a bezier configuration
+     * @param t in seconds
+     */
+    bool initWithDuration(float t, const BezierConfig &c);
+
+protected:
+    BezierConfig m_Config;
+    ofVec2f m_StartPosition;
+    ofVec2f m_PreviousPosition;
+
+private:
+    DISALLOW_COPY_AND_ASSIGN(BezierBy);
+    float bezierat(float a, float b, float c, float d, float t);
+};
+
+
+// BezierTo
 
 /** @class BezierTo
  * @brief An action that moves the target with a cubic Bezier curve to a destination point.
@@ -64,4 +122,5 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(BezierTo);
 };
-#endif // BEZIERTO_H
+
+#endif // BEZIERBY_H
