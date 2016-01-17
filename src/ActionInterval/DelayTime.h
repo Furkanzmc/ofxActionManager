@@ -27,7 +27,7 @@ THE SOFTWARE.
 
 #ifndef DELAYTIME_H
 #define DELAYTIME_H
-#include "../ActionInterval.h"
+#include "ActionInterval.h"
 
 /** @class DelayTime
  * @brief Delays the action a certain amount of seconds.

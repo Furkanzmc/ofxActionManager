@@ -27,7 +27,7 @@ THE SOFTWARE.
 
 #ifndef SEQUENCE_H
 #define SEQUENCE_H
-#include "../ActionInterval.h"
+#include "ActionInterval.h"
 
 /** @class Sequence
  * @brief Runs actions sequentially, one after another.
