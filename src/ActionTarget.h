@@ -24,6 +24,12 @@ public:
 
     void runAction(Action *action);
 
+    Action *getActionByTag(int tag) const;
+    size_t getNumberOfRunningActions() const;
+
+    void stopAllActions();
+    void stopActionByTag(int tag);
+
     void release();
 
 protected:

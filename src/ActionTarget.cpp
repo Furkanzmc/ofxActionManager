@@ -56,6 +56,26 @@ void ActionTarget::runAction(Action *action)
     ActionManager::getInstance()->addAction(action, this, false);
 }
 
+Action *ActionTarget::getActionByTag(int tag) const
+{
+    return ActionManager::getInstance()->getActionByTag(tag, this);
+}
+
+std::size_t ActionTarget::getNumberOfRunningActions() const
+{
+    return ActionManager::getInstance()->getNumberOfRunningActionsInTarget(this);
+}
+
+void ActionTarget::stopAllActions()
+{
+    ActionManager::getInstance()->removeAllActionsFromTarget(this);
+}
+
+void ActionTarget::stopActionByTag(int tag)
+{
+    ActionManager::getInstance()->removeActionByTag(tag, this);
+}
+
 void ActionTarget::release()
 {
     delete this;
