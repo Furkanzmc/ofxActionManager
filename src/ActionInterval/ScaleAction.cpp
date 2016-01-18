@@ -4,6 +4,14 @@
 //
 // ScaleTo
 //
+ScaleTo *ScaleTo::create(float duration, const ofVec3f &s)
+{
+    ScaleTo *scaleTo = new(std::nothrow) ScaleTo();
+    scaleTo->initWithDuration(duration, s.x, s.y, s.z);
+
+    return scaleTo;
+}
+
 ScaleTo *ScaleTo::create(float duration, float s)
 {
     ScaleTo *scaleTo = new(std::nothrow) ScaleTo();
@@ -108,6 +116,14 @@ ScaleBy *ScaleBy::create(float duration, float s)
 {
     ScaleBy *scaleBy = new(std::nothrow) ScaleBy();
     scaleBy->initWithDuration(duration, s);
+
+    return scaleBy;
+}
+
+ScaleBy *ScaleBy::create(float duration, const ofVec3f &scale)
+{
+    ScaleBy *scaleBy = new(std::nothrow) ScaleBy();
+    scaleBy->initWithDuration(duration, scale.x, scale.y, scale.z);
 
     return scaleBy;
 }

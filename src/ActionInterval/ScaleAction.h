@@ -18,6 +18,8 @@ public:
      */
     static ScaleTo *create(float duration, float s);
 
+    static ScaleTo *create(float duration, const ofVec3f &s);
+
     /**
      * Creates the action with and X factor and a Y factor.
      * @param duration Duration time, in seconds.
@@ -100,6 +102,7 @@ public:
      * @return An autoreleased ScaleBy object.
      */
     static ScaleBy *create(float duration, float s);
+    static ScaleBy *create(float duration, const ofVec3f &scale);
 
     /**
      * Creates the action with and X factor and a Y factor.
