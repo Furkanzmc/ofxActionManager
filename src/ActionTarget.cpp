@@ -2,6 +2,10 @@
 #include "ActionManager.h"
 
 ActionTarget::ActionTarget()
+    : m_Position(0, 0, 0)
+    , m_Scale(1, 1, 1)
+    , m_Rotation(0, 0, 0)
+    , m_Color(ofColor::white)
 {
 
 }
