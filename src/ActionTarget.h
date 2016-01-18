@@ -10,16 +10,16 @@ public:
     ActionTarget();
     virtual ~ActionTarget();
 
-    ofVec3f getPosition() const;
+    const ofVec3f &getPosition() const;
     void setPosition(const ofVec3f &positon);
 
-    ofVec3f getScale() const;
+    const ofVec3f &getScale() const;
     void setScale(const ofVec3f &scale);
 
-    ofVec3f getRotation() const;
+    const ofVec3f &getRotation() const;
     void setRotation(const ofVec3f &rotation);
 
-    ofColor getColor() const;
+    const ofColor &getColor() const;
     void setColor(const ofColor &color);
 
     void runAction(Action *action);

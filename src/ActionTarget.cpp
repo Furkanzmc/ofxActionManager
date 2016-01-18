@@ -15,7 +15,7 @@ ActionTarget::~ActionTarget()
 
 }
 
-ofVec3f ActionTarget::getPosition() const
+const ofVec3f &ActionTarget::getPosition() const
 {
     return m_Position;
 }
@@ -25,7 +25,7 @@ void ActionTarget::setPosition(const ofVec3f &positon)
     m_Position = positon;
 }
 
-ofVec3f ActionTarget::getScale() const
+const ofVec3f &ActionTarget::getScale() const
 {
     return m_Scale;
 }
@@ -35,7 +35,7 @@ void ActionTarget::setScale(const ofVec3f &scale)
     m_Scale = scale;
 }
 
-ofVec3f ActionTarget::getRotation() const
+const ofVec3f &ActionTarget::getRotation() const
 {
     return m_Rotation;
 }
@@ -45,7 +45,7 @@ void ActionTarget::setRotation(const ofVec3f &rotation)
     m_Rotation = rotation;
 }
 
-ofColor ActionTarget::getColor() const
+const ofColor &ActionTarget::getColor() const
 {
     return m_Color;
 }
