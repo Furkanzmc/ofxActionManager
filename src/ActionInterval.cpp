@@ -77,10 +77,10 @@ ExtraAction *ExtraAction::reverse() const
 
 void ExtraAction::update(float time)
 {
-//    CC_UNUSED_PARAM(time);
+    (void)time;
 }
 
 void ExtraAction::step(float dt)
 {
-//    CC_UNUSED_PARAM(dt);
+    (void)dt;
 }
