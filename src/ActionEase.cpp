@@ -43,7 +43,9 @@ void ActionEase::stop(void)
 
 void ActionEase::update(float time)
 {
-    m_Inner->update(time);
+    if (m_Inner) {
+        m_Inner->update(time);
+    }
 }
 
 ActionInterval *ActionEase::getInnerAction()

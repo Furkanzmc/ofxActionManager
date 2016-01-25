@@ -40,7 +40,7 @@ BezierBy *BezierBy::clone() const
 
 void BezierBy::update(float time)
 {
-    if (isStopped() == false) {
+    if (isStopped() == false && m_Target) {
         float xa = 0;
         float xb = m_Config.controlPoint_1.x;
         float xc = m_Config.controlPoint_2.x;

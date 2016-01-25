@@ -64,7 +64,7 @@ MoveBy *MoveBy::reverse() const
 
 void MoveBy::update(float t)
 {
-    if (isStopped() == false) {
+    if (isStopped() == false && m_Target) {
         m_Target->setPosition(m_StartPosition + m_PositionDelta * t);
     }
 }
