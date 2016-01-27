@@ -26,6 +26,7 @@
 #include "ActionInterval/TintAction.h"
 #include "ActionInterval/ActionFloat.h"
 #include "ActionInterval/ActionVec3.h"
+#include "ActionInterval/ActionVec4.h"
 
 //Easings
 #include "ActionInterval/Easings/EaseBack.h"
