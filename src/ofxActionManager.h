@@ -25,6 +25,7 @@
 #include "ActionInterval/Spawn.h"
 #include "ActionInterval/TintAction.h"
 #include "ActionInterval/ActionFloat.h"
+#include "ActionInterval/ActionVec3.h"
 
 //Easings
 #include "ActionInterval/Easings/EaseBack.h"

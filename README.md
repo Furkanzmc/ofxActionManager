@@ -56,6 +56,7 @@ void ofApp::mouseReleased(int x, int y, int button)
 - [ ] Animate
 - [ ] TargetedAction
 - [x] ActionFloat
+- [x] ActionVec3
 
 
 ## Instant Actions
