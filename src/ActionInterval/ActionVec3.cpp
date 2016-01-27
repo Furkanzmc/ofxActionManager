@@ -77,5 +77,8 @@ void ActionVec3::update(float delta)
 
 ActionVec3 *ActionVec3::reverse() const
 {
+    if (m_Value) {
+        return ActionVec3::create(m_Duration, m_To, m_From, m_Value);
+    }
     return ActionVec3::create(m_Duration, m_To, m_From, m_Callback);
 }
