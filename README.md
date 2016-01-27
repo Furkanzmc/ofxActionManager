@@ -55,7 +55,7 @@ void ofApp::mouseReleased(int x, int y, int button)
 - [ ] ReverseTime
 - [ ] Animate
 - [ ] TargetedAction
-- [ ] ActionFloat
+- [x] ActionFloat
 
 
 ## Instant Actions
