@@ -2,6 +2,9 @@
 #include "uthash.h"
 #include "ofLog.h"
 #include "Array.h"
+//OF Includes
+#include "ofEvents.h"
+#include "ofAppRunner.h"
 
 //
 // singleton stuff
@@ -22,6 +25,7 @@ ActionManager::ActionManager()
     : m_Targets(nullptr)
     , m_CurrentTarget(nullptr)
     , m_IsCurrentTargetSalvaged(false)
+    , m_IsAutoUpdating(false)
 {
 
 }
@@ -39,6 +43,23 @@ ActionManager *ActionManager::getInstance()
     }
 
     return m_Instance;
+}
+
+void ActionManager::startAutoUpdate()
+{
+
+    if (!m_IsAutoUpdating) {
+        m_IsAutoUpdating = true;
+        ofAddListener(ofEvents().update, this, &ActionManager::autoUpdate);
+    }
+}
+
+void ActionManager::stopAutoUpdate()
+{
+    if (m_IsAutoUpdating) {
+        m_IsAutoUpdating = false;
+        ofRemoveListener(ofEvents().update, this, &ActionManager::autoUpdate);
+    }
 }
 
 // private
@@ -86,6 +107,13 @@ void ActionManager::removeActionAtIndex(std::size_t index, tHashElement *element
     }
 }
 
+void ActionManager::autoUpdate(ofEventArgs &eventArgs)
+{
+    (void)eventArgs;
+
+    update(ofGetLastFrameTime());
+}
+
 // pause / resume
 
 void ActionManager::pauseTarget(ActionTarget *target)
@@ -124,6 +152,13 @@ void ActionManager::resumeTargets(const std::vector<ActionTarget *> &targetsToRe
 {
     for (const auto &ActionTarget : targetsToResume) {
         this->resumeTarget(ActionTarget);
+    }
+}
+
+void ActionManager::updateActions(const float &delta)
+{
+    if (m_IsAutoUpdating == false) {
+        update(delta);
     }
 }
 

@@ -28,7 +28,7 @@ THE SOFTWARE.
 #ifndef ACTIONMANAGER_H
 #define ACTIONMANAGER_H
 #include "Action.h"
-class Action;
+class ofEventArgs;
 struct _hashElement;
 
 /** @class ActionManager
@@ -40,6 +40,9 @@ public:
     ~ActionManager(void);
 
     static ActionManager *getInstance();
+
+    void startAutoUpdate();
+    void stopAutoUpdate();
 
     /** Adds an action with a target.
      If the target is already present, then the action will be added to the existing target.
@@ -132,10 +135,7 @@ public:
      */
     void resumeTargets(const std::vector<ActionTarget *> &targetsToResume);
 
-    /** Main loop of ActionManager.
-     * @param dt    In seconds.
-     */
-    void update(float dt);
+    void updateActions(const float &delta);
 
 private:
     // declared in ActionManager
@@ -145,11 +145,18 @@ private:
     void deleteHashElement(struct _hashElement *element);
     void actionAllocWithHashElement(struct _hashElement *element);
 
+    void autoUpdate(ofEventArgs &eventArgs);
+
+    /** Main loop of ActionManager.
+     * @param dt    In seconds.
+     */
+    void update(float dt);
+
 private:
     static ActionManager *m_Instance;
     struct _hashElement *m_Targets;
     struct _hashElement *m_CurrentTarget;
-    bool m_IsCurrentTargetSalvaged;
+    bool m_IsCurrentTargetSalvaged, m_IsAutoUpdating;
 };
 
 #endif // ACTIONMANAGER_H
