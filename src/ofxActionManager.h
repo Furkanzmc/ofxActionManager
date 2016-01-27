@@ -1,6 +1,5 @@
 #ifndef OFXACTIONMANAGER_H
 #define OFXACTIONMANAGER_H
-#include "ofxActionManager.h"
 #include "TweenFunction.h"
 #include "uthash.h"
 #include "utlist.h"
@@ -19,11 +18,12 @@
 #include "ActionInterval/BezierAction.h"
 #include "ActionInterval/DelayTime.h"
 #include "ActionInterval/MoveAction.h"
-#include "ActionInterval/Spawn.h"
-#include "ActionInterval/TintAction.h"
+#include "ActionInterval/RepeatAction.h"
 #include "ActionInterval/RotateAction.h"
 #include "ActionInterval/ScaleAction.h"
 #include "ActionInterval/Sequence.h"
+#include "ActionInterval/Spawn.h"
+#include "ActionInterval/TintAction.h"
 
 //Easings
 #include "ActionInterval/Easings/EaseBack.h"
@@ -45,4 +45,3 @@
 
 
 #endif // OFXACTIONMANAGER_H
-
