@@ -82,6 +82,11 @@ void RotateTo::calculateAngles(float &startAngle, float &diffAngle, float dstAng
     }
 }
 
+const ofVec3f &RotateTo::getDestinationAngle() const
+{
+    return m_DstAngle;
+}
+
 void RotateTo::startWithTarget(ActionTarget *target)
 {
     ActionInterval::startWithTarget(target);
@@ -152,6 +157,11 @@ bool RotateBy::initWithDuration(float duration, const ofVec3f &deltaAngle3D)
     }
 
     return false;
+}
+
+const ofVec3f &RotateBy::getDeltaAngle() const
+{
+    return m_DeltaAngle;
 }
 
 

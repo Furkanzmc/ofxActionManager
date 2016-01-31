@@ -70,6 +70,8 @@ public:
      */
     void calculateAngles(float &startAngle, float &diffAngle, float dstAngle);
 
+    const ofVec3f &getDestinationAngle() const;
+
 protected:
     ofVec3f m_DstAngle;
     ofVec3f m_StartAngle;
@@ -121,6 +123,8 @@ public:
     bool initWithDuration(float duration, float deltaAngle);
 
     bool initWithDuration(float duration, const ofVec3f &deltaAngle3D);
+
+    const ofVec3f &getDeltaAngle() const;
 
 protected:
     ofVec3f m_DeltaAngle;
