@@ -75,6 +75,11 @@ bool ScaleTo::initWithDuration(float duration, float sx, float sy, float sz)
     return false;
 }
 
+ofVec3f ScaleTo::getEndScale() const
+{
+    return ofVec3f(m_EndScaleX, m_EndScaleY, m_EndScaleZ);
+}
+
 ScaleTo *ScaleTo::clone() const
 {
     // no copy constructor

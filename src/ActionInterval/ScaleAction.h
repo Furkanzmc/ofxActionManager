@@ -70,6 +70,8 @@ public:
      */
     bool initWithDuration(float duration, float sx, float sy, float sz);
 
+    ofVec3f getEndScale() const;
+
 protected:
     float m_ScaleX;
     float m_ScaleY;
