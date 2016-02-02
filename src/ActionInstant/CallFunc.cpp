@@ -16,7 +16,7 @@ CallFunc *CallFunc::create(const std::function<void()> &func)
 
 bool CallFunc::initWithFunction(const std::function<void()> &func)
 {
-    _function = func;
+    m_Function = func;
     return true;
 }
 
@@ -30,8 +30,8 @@ CallFunc *CallFunc::clone() const
 {
     // no copy constructor
     auto a = new(std::nothrow) CallFunc();
-    if (_function) {
-        a->initWithFunction(_function);
+    if (m_Function) {
+        a->initWithFunction(m_Function);
         return a;
     }
 
@@ -53,8 +53,8 @@ void CallFunc::update(float time)
 
 void CallFunc::execute()
 {
-    if (_function) {
-        _function();
+    if (m_Function) {
+        m_Function();
     }
 }
 
@@ -74,7 +74,7 @@ CallFuncN *CallFuncN::create(const std::function<void(ActionTarget *)> &func)
 
 bool CallFuncN::initWithFunction(const std::function<void(ActionTarget *)> &func)
 {
-    _function = func;
+    m_Function = func;
     return true;
 }
 
@@ -88,8 +88,8 @@ CallFuncN *CallFuncN::clone() const
 {
     // no copy constructor
     auto a = new(std::nothrow) CallFuncN();
-    if (_function) {
-        a->initWithFunction(_function);
+    if (m_Function) {
+        a->initWithFunction(m_Function);
         return a;
     }
 
@@ -111,7 +111,7 @@ void CallFuncN::update(float time)
 
 void CallFuncN::execute()
 {
-    if (_function) {
-        _function(m_Target);
+    if (m_Function) {
+        m_Function(m_Target);
     }
 }

@@ -36,7 +36,7 @@ public:
 
 public:
     CallFunc()
-        : _function(nullptr)
+        : m_Function(nullptr)
     {
     }
     virtual ~CallFunc();
@@ -48,7 +48,7 @@ public:
 
 protected:
     /** function that will be called */
-    std::function<void()> _function;
+    std::function<void()> m_Function;
 
 private:
     DISALLOW_COPY_AND_ASSIGN(CallFunc);
@@ -89,7 +89,7 @@ public:
 
 public:
     CallFuncN()
-        : _function(nullptr)
+        : m_Function(nullptr)
     {
     }
     virtual ~CallFuncN();
@@ -101,7 +101,7 @@ public:
 
 protected:
     /** function that will be called */
-    std::function<void(ActionTarget *)> _function;
+    std::function<void(ActionTarget *)> m_Function;
 
 private:
     DISALLOW_COPY_AND_ASSIGN(CallFuncN);
