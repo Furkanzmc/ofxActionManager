@@ -95,14 +95,14 @@ bool Spawn::initWithTwoActions(FiniteTimeAction *action1, FiniteTimeAction *acti
     float d2 = action2->getDuration();
 
     if (ActionInterval::initWithDuration(MAX(d1, d2))) {
-        _one = action1;
-        _two = action2;
+        m_One = action1;
+        m_Two = action2;
 
         if (d1 > d2) {
-            _two = Sequence::createWithTwoActions(action2, DelayTime::create(d1 - d2));
+            m_Two = Sequence::createWithTwoActions(action2, DelayTime::create(d1 - d2));
         }
         else if (d1 < d2) {
-            _one = Sequence::createWithTwoActions(action1, DelayTime::create(d2 - d1));
+            m_One = Sequence::createWithTwoActions(action1, DelayTime::create(d2 - d1));
         }
 
         ret = true;
@@ -115,42 +115,42 @@ Spawn *Spawn::clone(void) const
 {
     // no copy constructor
     auto a = new(std::nothrow) Spawn();
-    a->initWithTwoActions(_one->clone(), _two->clone());
+    a->initWithTwoActions(m_One->clone(), m_Two->clone());
 
     return a;
 }
 
 Spawn::~Spawn(void)
 {
-    SAFE_RELEASE(_one);
-    SAFE_RELEASE(_two);
+    SAFE_RELEASE(m_One);
+    SAFE_RELEASE(m_Two);
 }
 
 void Spawn::startWithTarget(ActionTarget *target)
 {
     ActionInterval::startWithTarget(target);
-    _one->startWithTarget(target);
-    _two->startWithTarget(target);
+    m_One->startWithTarget(target);
+    m_Two->startWithTarget(target);
 }
 
 void Spawn::stop(void)
 {
-    _one->stop();
-    _two->stop();
+    m_One->stop();
+    m_Two->stop();
     ActionInterval::stop();
 }
 
 void Spawn::update(float time)
 {
-    if (_one) {
-        _one->update(time);
+    if (m_One) {
+        m_One->update(time);
     }
-    if (_two) {
-        _two->update(time);
+    if (m_Two) {
+        m_Two->update(time);
     }
 }
 
 Spawn *Spawn::reverse() const
 {
-    return Spawn::createWithTwoActions(_one->reverse(), _two->reverse());
+    return Spawn::createWithTwoActions(m_One->reverse(), m_Two->reverse());
 }

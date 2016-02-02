@@ -55,8 +55,8 @@ public:
     bool initWithTwoActions(FiniteTimeAction *action1, FiniteTimeAction *action2);
 
 protected:
-    FiniteTimeAction *_one;
-    FiniteTimeAction *_two;
+    FiniteTimeAction *m_One;
+    FiniteTimeAction *m_Two;
 
 private:
     DISALLOW_COPY_AND_ASSIGN(Spawn);
