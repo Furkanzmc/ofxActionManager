@@ -3,9 +3,9 @@
 
 Action::Action()
     : m_Tag(-1)
+    , m_RefCount(1)
     , m_OriginalTarget(nullptr)
     , m_Target(nullptr)
-    , m_IsStopped(false)
 {
 
 }
@@ -37,12 +37,12 @@ void Action::startWithTarget(ActionTarget *aTarget)
 
 void Action::stop()
 {
-    m_IsStopped = true;
+    m_Target = nullptr;
 }
 
 bool Action::isStopped() const
 {
-    return m_IsStopped;
+    return m_Target == nullptr;
 }
 
 void Action::step(float dt)
@@ -55,7 +55,15 @@ void Action::update(float time)
     ofLogNotice("ofxAction") << __FUNCTION__ << ": Override me!";
 }
 
+void Action::retain()
+{
+    m_RefCount++;
+}
+
 void Action::release()
 {
-    delete this;
+    m_RefCount--;
+    if (m_RefCount <= 0) {
+        delete this;
+    }
 }

@@ -87,6 +87,7 @@ void ActionManager::removeActionAtIndex(std::size_t index, tHashElement *element
     Action *action = (Action *)element->actions->arr[index];
 
     if (action == element->currentAction && (! element->currentActionSalvaged)) {
+        element->currentAction->retain();
         element->currentActionSalvaged = true;
     }
 
@@ -219,6 +220,7 @@ void ActionManager::removeAllActionsFromTarget(ActionTarget *target)
     HASH_FIND_PTR(m_Targets, &target, element);
     if (element) {
         if (ArrayContainsObject(element->actions, element->currentAction) && (! element->currentActionSalvaged)) {
+            element->currentAction->retain();
             element->currentActionSalvaged = true;
         }
 

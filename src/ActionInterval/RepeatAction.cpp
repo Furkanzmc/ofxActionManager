@@ -21,6 +21,7 @@ bool Repeat::initWithAction(FiniteTimeAction *action, unsigned int times)
     if (ActionInterval::initWithDuration(d)) {
         m_Times = times;
         m_InnerAction = action;
+        action->retain();
 
         m_ActionInstant = dynamic_cast<ActionInstant *>(action) ? true : false;
         //an instant action needs to be executed one time less in the update method since it uses startWithTarget to execute the action
@@ -132,6 +133,7 @@ bool RepeatForever::initWithAction(ActionInterval *action)
         return false;
     }
 
+    action->retain();
     m_InnerAction = action;
     return true;
 }

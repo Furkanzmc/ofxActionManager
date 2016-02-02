@@ -18,6 +18,7 @@ bool ActionEase::initWithAction(ActionInterval *action)
 
     if (ActionInterval::initWithDuration(action->getDuration())) {
         m_Inner = action;
+        action->retain();
         return true;
     }
 

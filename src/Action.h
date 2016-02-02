@@ -97,6 +97,7 @@ public:
      */
     virtual void update(float time);
 
+    void retain();
     void release();
 
     /** Return certain target.
@@ -174,8 +175,7 @@ public:
     }
 
 private:
-    int m_Tag;
-    bool m_IsStopped;
+    int m_Tag, m_RefCount;
 
 protected:
     ActionTarget *m_OriginalTarget,

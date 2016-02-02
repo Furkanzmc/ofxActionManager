@@ -92,7 +92,9 @@ bool Sequence::initWithTwoActions(FiniteTimeAction *actionOne, FiniteTimeAction 
     ActionInterval::initWithDuration(d);
 
     m_Actions[0] = actionOne;
+    actionOne->retain();
     m_Actions[1] = actionTwo;
+    actionTwo->retain();
 
     return true;
 }

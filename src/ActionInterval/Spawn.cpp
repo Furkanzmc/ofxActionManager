@@ -105,6 +105,9 @@ bool Spawn::initWithTwoActions(FiniteTimeAction *action1, FiniteTimeAction *acti
             m_One = Sequence::createWithTwoActions(action1, DelayTime::create(d2 - d1));
         }
 
+        m_One->retain();
+        m_Two->retain();
+
         ret = true;
     }
 
