@@ -46,9 +46,9 @@ void ofApp::mouseReleased(int x, int y, int button)
 - [x] ScaleTo
 - [x] ScaleBy
 - [ ] Blink
-- [ ] FadeTo
-- [ ] FadeIn
-- [ ] FadeOut
+- [x] FadeTo
+- [x] FadeIn
+- [x] FadeOut
 - [x] TintTo
 - [x] TintBy
 - [x] DelayTime

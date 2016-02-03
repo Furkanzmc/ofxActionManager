@@ -22,6 +22,9 @@ public:
     const ofColor &getColor() const;
     void setColor(const ofColor &color);
 
+    GLubyte getOpacity() const;
+    void setOpacity(GLubyte alpha);
+
     void runAction(Action *action);
 
     Action *getActionByTag(int tag) const;

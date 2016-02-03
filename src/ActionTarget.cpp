@@ -55,6 +55,16 @@ void ActionTarget::setColor(const ofColor &color)
     m_Color = color;
 }
 
+GLubyte ActionTarget::getOpacity() const
+{
+    return m_Color.a;
+}
+
+void ActionTarget::setOpacity(GLubyte alpha)
+{
+    m_Color.a = alpha;
+}
+
 void ActionTarget::runAction(Action *action)
 {
     ActionManager::getInstance()->addAction(action, this, false);
