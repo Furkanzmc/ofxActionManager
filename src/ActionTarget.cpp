@@ -94,3 +94,13 @@ void ActionTarget::release()
 {
     delete this;
 }
+
+bool ActionTarget::isVisible() const
+{
+    return m_IsVisible;
+}
+
+void ActionTarget::setVisible(bool visible)
+{
+    m_IsVisible = visible;
+}

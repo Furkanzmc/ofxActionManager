@@ -13,6 +13,7 @@
 
 //Action Instant
 #include "ActionInstant/CallFunc.h"
+#include "ActionInstant/VisibilityAction.h"
 
 //Action Interval
 #include "ActionInterval/BezierAction.h"

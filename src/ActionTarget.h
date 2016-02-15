@@ -35,11 +35,15 @@ public:
 
     void release();
 
+    bool isVisible() const;
+    void setVisible(bool visible);
+
 protected:
     ofVec3f m_Position;
     ofVec3f m_Scale;
     ofVec3f m_Rotation;
     ofColor m_Color;
+    bool m_IsVisible;
 };
 
 #endif // ACTIONTARGET_H
