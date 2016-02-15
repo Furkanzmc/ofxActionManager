@@ -62,9 +62,9 @@ void ofApp::mouseReleased(int x, int y, int button)
 
 ## Instant Actions
 
-- [ ] Show
-- [ ] Hide
-- [ ] ToggleVisibility
+- [x] Show
+- [x] Hide
+- [x] ToggleVisibility
 - [ ] RemoveSelf
 - [ ] FlipX
 - [ ] FlipY
