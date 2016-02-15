@@ -28,6 +28,7 @@
 #include "ActionInterval/ActionFloat.h"
 #include "ActionInterval/ActionVec3.h"
 #include "ActionInterval/ActionVec4.h"
+#include "ActionInterval/FadeAction.h"
 
 //Easings
 #include "ActionInterval/Easings/EaseBack.h"
