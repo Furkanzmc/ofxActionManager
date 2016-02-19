@@ -76,6 +76,8 @@ public:
     bool initWithDuration(float duration, const ofVec2f &deltaPosition);
     bool initWithDuration(float duration, const ofVec3f &deltaPosition);
 
+    const ofVec3f &getDeltaPosition() const;
+
 protected:
     ofVec3f m_PositionDelta;
     ofVec3f m_StartPosition;
@@ -117,6 +119,8 @@ public:
     virtual MoveTo *clone() const override;
     virtual MoveTo *reverse() const  override;
     virtual void startWithTarget(ActionTarget *target) override;
+
+    const ofVec3f getTargetPosition() const;
 
 public:
     MoveTo();

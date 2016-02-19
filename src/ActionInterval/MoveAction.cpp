@@ -43,6 +43,11 @@ bool MoveBy::initWithDuration(float duration, const ofVec3f &deltaPosition)
     return ret;
 }
 
+const ofVec3f &MoveBy::getDeltaPosition() const
+{
+    return m_PositionDelta;
+}
+
 MoveBy *MoveBy::clone() const
 {
     // no copy constructor
@@ -124,6 +129,11 @@ void MoveTo::startWithTarget(ActionTarget *target)
 {
     MoveBy::startWithTarget(target);
     m_PositionDelta = m_EndPosition - target->getPosition();
+}
+
+const ofVec3f MoveTo::getTargetPosition() const
+{
+    return m_EndPosition;
 }
 
 MoveTo *MoveTo::reverse() const
