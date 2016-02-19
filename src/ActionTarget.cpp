@@ -6,6 +6,7 @@ ActionTarget::ActionTarget()
     , m_Scale(1, 1, 1)
     , m_Rotation(0, 0, 0)
     , m_Color(ofColor::white)
+    , m_ReferenceCount(1)
 {
 
 }
@@ -90,9 +91,17 @@ void ActionTarget::stopActionByTag(int tag)
     ActionManager::getInstance()->removeActionByTag(tag, this);
 }
 
+void ActionTarget::retain()
+{
+    m_ReferenceCount++;
+}
+
 void ActionTarget::release()
 {
-    delete this;
+    m_ReferenceCount--;
+    if (m_ReferenceCount == 0) {
+        delete this;
+    }
 }
 
 bool ActionTarget::isVisible() const
@@ -103,4 +112,9 @@ bool ActionTarget::isVisible() const
 void ActionTarget::setVisible(bool visible)
 {
     m_IsVisible = visible;
+}
+
+unsigned int ActionTarget::getReferenceCount() const
+{
+    return m_ReferenceCount;
 }

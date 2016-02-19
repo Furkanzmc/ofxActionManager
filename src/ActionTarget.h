@@ -33,10 +33,13 @@ public:
     void stopAllActions();
     void stopActionByTag(int tag);
 
+    void retain();
     void release();
 
     bool isVisible() const;
     void setVisible(bool visible);
+
+    unsigned int getReferenceCount() const;
 
 protected:
     ofVec3f m_Position;
@@ -44,6 +47,7 @@ protected:
     ofVec3f m_Rotation;
     ofColor m_Color;
     bool m_IsVisible;
+    unsigned int m_ReferenceCount;
 };
 
 #endif // ACTIONTARGET_H
