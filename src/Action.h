@@ -28,11 +28,17 @@ THE SOFTWARE.
 #ifndef ACTION_H
 #define ACTION_H
 #include "ActionTarget.h"
+
 #define DISALLOW_COPY_AND_ASSIGN(TypeName) \
     TypeName(const TypeName &) = delete; \
     TypeName &operator =(const TypeName &) = delete
 
 #define SAFE_RELEASE(p) do { if(p) { (p)->release(); (p) = nullptr; } } while(0)
+#define OFXACTIONS_NS_BEGIN namespace ofxActions {
+#define OFXACTIONS_NS_END }
+#define USING_NS_OFXACTIONS using namespace ofxActions
+
+OFXACTIONS_NS_BEGIN
 
 /**
  * @brief Base class for Action objects
@@ -184,6 +190,10 @@ protected:
     unsigned int m_Flags;
 };
 
+OFXACTIONS_NS_END
+
+OFXACTIONS_NS_BEGIN
+
 /** @class FiniteTimeAction
  * @brief
  * Base class actions that do have a finite time duration.
@@ -239,5 +249,10 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(FiniteTimeAction);
 };
+
+OFXACTIONS_NS_END
+
+//For making sure we can use actions without using the ofxActions namespace
+USING_NS_OFXACTIONS;
 
 #endif // ACTION_H

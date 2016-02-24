@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASECUBIC_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
 @class EaseCubicActionIn
 @brief Ease Cubic In
@@ -109,5 +111,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseCubicActionInOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASECUBIC_H

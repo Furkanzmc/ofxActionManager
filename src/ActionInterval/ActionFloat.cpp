@@ -1,4 +1,5 @@
 #include "ActionFloat.h"
+USING_NS_OFXACTIONS;
 
 ActionFloat::ActionFloat()
     : m_Value(nullptr)

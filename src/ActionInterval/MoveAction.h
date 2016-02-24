@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define MOVEBY_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class MoveBy
  * @brief Moves a Node object x,y pixels by modifying it's position attribute.
  x and y are relative to the position of the object.
@@ -144,5 +146,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(MoveTo);
 };
+
+OFXACTIONS_NS_END
 
 #endif // MOVEBY_H

@@ -29,6 +29,7 @@ THE SOFTWARE.
 #define EASECIRCLE_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
 /**
 @class EaseCircleActionIn
 @brief Ease Circle In
@@ -110,4 +111,5 @@ private:
     DISALLOW_COPY_AND_ASSIGN(EaseCircleActionInOut);
 };
 
+OFXACTIONS_NS_END
 #endif // EASECIRCLE_H

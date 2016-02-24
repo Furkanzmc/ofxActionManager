@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEQUINTIC_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
 @class EaseQuinticActionIn
 @brief Ease Quintic In
@@ -109,5 +111,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseQuinticActionInOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEQUINTIC_H

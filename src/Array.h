@@ -52,13 +52,13 @@ THE SOFTWARE.
 
 #define SAFE_RELEASE(p) do { if(p) { (p)->release(); (p) = nullptr; } } while(0)
 // Easy integration
-#define CCARRAYDATA_FOREACH(__array__, __object__)                                                          \
+#define CCARRAYDATA_FOREACH(__array__, __object__) \
 __object__=__array__->arr[0]; for(std::size_t i=0, num=__array__->num; i<num; i++, __object__=__array__->arr[i])    \
 
 
 struct Array {
     std::size_t num, max;
-    Action **arr;
+    ofxActions::Action **arr;
 } ;
 
 /** Allocates and initializes a new array with specified capacity */
@@ -77,16 +77,16 @@ void ArrayEnsureExtraCapacity(Array *arr, std::size_t extra);
 void ArrayShrink(Array *arr);
 
 /** Returns index of first occurrence of object, NSNotFound if object not found. */
-std::size_t ArrayGetIndexOfObject(Array *arr, Action *object);
+std::size_t ArrayGetIndexOfObject(Array *arr, ofxActions::Action *object);
 
 /** Returns a Boolean value that indicates whether object is present in array. */
-bool ArrayContainsObject(Array *arr, Action *object);
+bool ArrayContainsObject(Array *arr, ofxActions::Action *object);
 
 /** Appends an object. Behavior undefined if array doesn't have enough capacity. */
-void ArrayAppendObject(Array *arr, Action *object);
+void ArrayAppendObject(Array *arr, ofxActions::Action *object);
 
 /** Appends an object. Capacity of arr is increased if needed. */
-void ArrayAppendObjectWithResize(Array *arr, Action *object);
+void ArrayAppendObjectWithResize(Array *arr, ofxActions::Action *object);
 
 /** Appends objects from plusArr to arr.
  Behavior undefined if arr doesn't have enough capacity. */
@@ -96,7 +96,7 @@ void ArrayAppendArray(Array *arr, Array *plusArr);
 void ArrayAppendArrayWithResize(Array *arr, Array *plusArr);
 
 /** Inserts an object at index */
-void ArrayInsertObjectAtIndex(Array *arr, Action *object, std::size_t index);
+void ArrayInsertObjectAtIndex(Array *arr, ofxActions::Action *object, std::size_t index);
 
 /** Swaps two objects */
 void ArraySwapObjectsAtIndexes(Array *arr, std::size_t index1, std::size_t index2);
@@ -113,11 +113,11 @@ void ArrayRemoveObjectAtIndex(Array *arr, std::size_t index, bool releaseObj = t
  Behavior undefined if index outside [0, num-1]. */
 void ArrayFastRemoveObjectAtIndex(Array *arr, std::size_t index);
 
-void ArrayFastRemoveObject(Array *arr, Action *object);
+void ArrayFastRemoveObject(Array *arr, ofxActions::Action *object);
 
 /** Searches for the first occurrence of object and removes it. If object is not
  found the function has no effect. */
-void ArrayRemoveObject(Array *arr, Action *object, bool releaseObj = true);
+void ArrayRemoveObject(Array *arr, ofxActions::Action *object, bool releaseObj = true);
 
 /** Removes from arr all objects in minusArr. For each object in minusArr, the
  first matching instance in arr will be removed. */

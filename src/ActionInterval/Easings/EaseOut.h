@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEOUT_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class EaseOut
  @brief EaseOut action with a rate.
@@ -59,5 +61,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEOUT_H

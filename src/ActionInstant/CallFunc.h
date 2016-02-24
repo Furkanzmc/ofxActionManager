@@ -2,6 +2,8 @@
 #define CALLFUNC_H
 #include "ActionInstant.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class CallFunc
 * @brief Calls a 'callback'.
 */
@@ -106,5 +108,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(CallFuncN);
 };
+
+OFXACTIONS_NS_END
 
 #endif // CALLFUNC_H

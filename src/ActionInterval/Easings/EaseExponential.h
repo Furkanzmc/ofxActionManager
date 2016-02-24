@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEEXPONENTIALIN_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class EaseExponentialIn
  @brief Ease Exponential In action.
@@ -124,5 +126,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseExponentialOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEEXPONENTIALIN_H

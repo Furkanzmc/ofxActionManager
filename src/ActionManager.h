@@ -53,7 +53,7 @@ public:
      * @param target    The target which need to be added an action.
      * @param paused    Is the target paused or not.
      */
-    void addAction(Action *action, ActionTarget *target, bool paused);
+    void addAction(ofxActions::Action *action, ActionTarget *target, bool paused);
 
     /** Removes all actions from all the targets.
      */
@@ -70,7 +70,7 @@ public:
      *
      * @param action    A certain target.
      */
-    void removeAction(Action *action);
+    void removeAction(ofxActions::Action *action);
 
     /** Removes an action given its tag and the target.
      *
@@ -99,7 +99,7 @@ public:
      * @param target    A certain target.
      * @return  The Action the with the given tag.
      */
-    Action *getActionByTag(int tag, const ActionTarget *target) const;
+    ofxActions::Action *getActionByTag(int tag, const ActionTarget *target) const;
 
     /** Returns the numbers of actions that are running in a certain target.
      * Composable actions are counted as 1 action. Example:

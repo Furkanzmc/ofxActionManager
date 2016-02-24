@@ -30,6 +30,8 @@ THE SOFTWARE.
 #include "ActionInterval.h"
 #include "TweenFunction.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class ActionEase
  @brief Base class for Easing actions.
@@ -133,4 +135,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseRateAction);
 };
+
+OFXACTIONS_NS_END
+
 #endif // ACTIONEASE_H

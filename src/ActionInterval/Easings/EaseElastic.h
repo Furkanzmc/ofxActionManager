@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEELASTIC_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class EaseElastic
  @brief Ease Elastic abstract class
@@ -199,5 +201,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseElasticInOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEELASTIC_H

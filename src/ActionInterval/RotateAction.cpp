@@ -1,5 +1,6 @@
 #include "RotateAction.h"
 #include "ofLog.h"
+USING_NS_OFXACTIONS;
 
 //
 // RotateTo

@@ -1,4 +1,5 @@
 #include "EaseIn.h"
+USING_NS_OFXACTIONS;
 
 EaseIn::EaseIn()
 {

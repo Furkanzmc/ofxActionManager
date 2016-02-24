@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define ACTIONINSTANT_H
 #include "Action.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class ActionInstant
 * @brief Instant actions are immediate actions. They don't have a duration like the IntervalAction actions.
 **/
@@ -53,5 +55,7 @@ public:
      */
     virtual void update(float time) override;
 };
+
+OFXACTIONS_NS_END
 
 #endif // ACTIONINSTANT_H

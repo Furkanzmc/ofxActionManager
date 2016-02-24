@@ -1,4 +1,5 @@
 #include "VisibilityAction.h"
+USING_NS_OFXACTIONS;
 
 //
 // Show

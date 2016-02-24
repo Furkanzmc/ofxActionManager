@@ -2,6 +2,8 @@
 #define VISIBILITYACTION_H
 #include "ActionInstant.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class Show
 * @brief Show the node.
 **/
@@ -91,5 +93,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(ToggleVisibility);
 };
+
+OFXACTIONS_NS_END
 
 #endif // VISIBILITYACTION_H

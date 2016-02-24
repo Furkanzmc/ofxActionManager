@@ -1,5 +1,6 @@
 #include "BezierAction.h"
 #include "ofLog.h"
+USING_NS_OFXACTIONS;
 
 BezierBy::BezierBy()
 {

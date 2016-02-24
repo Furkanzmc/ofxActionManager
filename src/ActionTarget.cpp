@@ -1,5 +1,6 @@
 #include "ActionTarget.h"
 #include "ActionManager.h"
+USING_NS_OFXACTIONS;
 
 ActionTarget::ActionTarget()
     : m_Position(0, 0, 0)

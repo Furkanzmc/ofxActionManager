@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEQUARTIC_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
 @class EaseQuarticActionIn
 @brief Ease Quartic In
@@ -109,4 +111,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseQuarticActionInOut);
 };
+
+OFXACTIONS_NS_END
+
 #endif // EASEQUARTIC_H

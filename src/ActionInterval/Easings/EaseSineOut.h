@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASESINEOUT_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class EaseSineOut
  @brief Ease Sine Out
@@ -58,5 +60,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseSineOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASESINEOUT_H

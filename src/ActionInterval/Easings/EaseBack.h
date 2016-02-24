@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEBACK_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class EaseBackIn
  @brief EaseBackIn action.
@@ -118,5 +120,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseBackInOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEBACK_H

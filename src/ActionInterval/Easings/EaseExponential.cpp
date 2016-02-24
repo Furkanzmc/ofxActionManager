@@ -1,4 +1,5 @@
 #include "EaseExponential.h"
+USING_NS_OFXACTIONS;
 
 EaseExponentialIn::EaseExponentialIn()
 {

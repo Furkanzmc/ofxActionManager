@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define EASEBOUNCE_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  @class EaseBounce
  @brief EaseBounce abstract class.
@@ -139,5 +141,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseBounceInOut);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEBOUNCE_H

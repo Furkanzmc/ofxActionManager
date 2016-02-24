@@ -1,4 +1,5 @@
 #include "ActionInterval.h"
+USING_NS_OFXACTIONS;
 
 ActionInterval::ActionInterval()
     : m_Elapsed(0.f)

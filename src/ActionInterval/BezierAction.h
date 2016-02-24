@@ -40,6 +40,8 @@ struct BezierConfig {
     ofVec2f controlPoint_2;
 };
 
+OFXACTIONS_NS_BEGIN
+
 /** @class BezierBy
  * @brief An action that moves the target with a cubic Bezier curve by a certain distance.
  */
@@ -122,5 +124,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(BezierTo);
 };
+
+OFXACTIONS_NS_END
 
 #endif // BEZIERBY_H

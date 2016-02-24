@@ -1,4 +1,5 @@
 #include "EaseSineInOut.h"
+USING_NS_OFXACTIONS;
 
 EaseSineInOut *EaseSineInOut::create(ActionInterval *action)
 {

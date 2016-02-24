@@ -3,6 +3,8 @@
 #include "ActionInterval.h"
 class ActionTarget;
 
+OFXACTIONS_NS_BEGIN
+
 /** @class FadeTo
  * @brief Fades an object that implements the RGBAProtocol protocol. It modifies the opacity from the current value to a custom one.
  @warning This action doesn't support "reverse"
@@ -115,5 +117,7 @@ private:
     DISALLOW_COPY_AND_ASSIGN(FadeOut);
     FadeTo *_reverseAction;
 };
+
+OFXACTIONS_NS_END
 
 #endif // FADEACTION_H

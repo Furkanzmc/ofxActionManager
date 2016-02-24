@@ -2,6 +2,8 @@
 #define ACTIONVEC3_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  * @class ActionVec3
  * @brief Action used to animate any value in range [from,to] over specified time interval
@@ -58,5 +60,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(ActionVec3);
 };
+
+OFXACTIONS_NS_END
 
 #endif // ACTIONVEC3_H

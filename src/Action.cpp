@@ -1,5 +1,6 @@
 #include "Action.h"
 #include "ofMain.h"
+USING_NS_OFXACTIONS;
 
 Action::Action()
     : m_Tag(-1)

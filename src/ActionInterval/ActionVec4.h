@@ -2,6 +2,8 @@
 #define ACTIONVEC4_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  * @class ActionVec4
  * @brief Action used to animate any value in range [from,to] over specified time interval
@@ -58,5 +60,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(ActionVec4);
 };
+
+OFXACTIONS_NS_END
 
 #endif // ACTIONVEC4_H

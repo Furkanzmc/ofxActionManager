@@ -2,6 +2,8 @@
 #define SPAWNACTION_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class Spawn
  * @brief Spawn a new action immediately
  */
@@ -61,5 +63,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(Spawn);
 };
+
+OFXACTIONS_NS_END
 
 #endif // SPAWNACTION_H

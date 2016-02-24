@@ -2,6 +2,8 @@
 #define ROTATEACTION_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class RotateTo
  * @brief Rotates a ActionTarget object to a certain angle by modifying it's rotation attribute.
  The direction will be decided by the shortest angle.
@@ -133,4 +135,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(RotateBy);
 };
+
+OFXACTIONS_NS_END
+
 #endif // ROTATEACTION_H

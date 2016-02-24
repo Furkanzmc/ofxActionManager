@@ -5,6 +5,7 @@
 //OF Includes
 #include "ofEvents.h"
 #include "ofAppRunner.h"
+USING_NS_OFXACTIONS;
 
 //
 // singleton stuff

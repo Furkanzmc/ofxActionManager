@@ -29,6 +29,7 @@ THE SOFTWARE.
 #define EASEBEZIERACTION_H
 #include "../ActionEase.h"
 
+OFXACTIONS_NS_BEGIN
 /**
 @class EaseBezierAction
 @brief Ease Bezier
@@ -66,5 +67,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(EaseBezierAction);
 };
+
+OFXACTIONS_NS_END
 
 #endif // EASEBEZIERACTION_H

@@ -1,4 +1,5 @@
 #include "EaseBack.h"
+USING_NS_OFXACTIONS;
 
 //
 // EaseBackIn

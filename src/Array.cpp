@@ -26,6 +26,7 @@ THE SOFTWARE.
 
 #include "Array.h"
 #include "ofLog.h"
+USING_NS_OFXACTIONS;
 
 /** Allocates and initializes a new array with specified capacity */
 Array *ArrayNew(std::size_t capacity)

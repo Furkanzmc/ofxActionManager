@@ -3,6 +3,8 @@
 #include "ActionInterval.h"
 #include "ofColor.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class TintTo
  * @brief Tints a ActionTarget that implements the ActionTargetRGB protocol from current tint to a custom one.
  @warning This action doesn't support "reverse"
@@ -101,5 +103,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(TintBy);
 };
+
+OFXACTIONS_NS_END
 
 #endif // TINTACTION_H

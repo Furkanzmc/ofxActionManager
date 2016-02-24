@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define DELAYTIME_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class DelayTime
  * @brief Delays the action a certain amount of seconds.
 */
@@ -59,5 +61,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(DelayTime);
 };
+
+OFXACTIONS_NS_END
 
 #endif // DELAYTIME_H

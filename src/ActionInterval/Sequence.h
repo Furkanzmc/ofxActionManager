@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define SEQUENCE_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class Sequence
  * @brief Runs actions sequentially, one after another.
  */
@@ -90,5 +92,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(Sequence);
 };
+
+OFXACTIONS_NS_END
 
 #endif // SEQUENCE_H

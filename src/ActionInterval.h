@@ -29,6 +29,8 @@ THE SOFTWARE.
 #define ACTIONINTERVAL_H
 #include "Action.h"
 
+OFXACTIONS_NS_BEGIN
+
 /**
  * @addtogroup actions
  * @{
@@ -104,5 +106,7 @@ public:
     virtual void update(float time);
     virtual void step(float dt);
 };
+
+OFXACTIONS_NS_END
 
 #endif // ACTIONINTERVAL_H

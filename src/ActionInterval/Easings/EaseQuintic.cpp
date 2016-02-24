@@ -1,4 +1,5 @@
 #include "EaseQuintic.h"
+USING_NS_OFXACTIONS;
 
 //
 // EaseQuinticActionIn

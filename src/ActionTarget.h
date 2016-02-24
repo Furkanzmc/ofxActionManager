@@ -2,7 +2,11 @@
 #define ACTIONTARGET_H
 #include "ofVec3f.h"
 #include "ofColor.h"
+
+namespace ofxActions
+{
 class Action;
+}
 
 class ActionTarget
 {
@@ -25,9 +29,9 @@ public:
     GLubyte getOpacity() const;
     void setOpacity(GLubyte alpha);
 
-    void runAction(Action *action);
+    void runAction(ofxActions::Action *action);
 
-    Action *getActionByTag(int tag) const;
+    ofxActions::Action *getActionByTag(int tag) const;
     size_t getNumberOfRunningActions() const;
 
     void stopAllActions();

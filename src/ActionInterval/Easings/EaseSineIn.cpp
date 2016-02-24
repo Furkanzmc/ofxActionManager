@@ -1,5 +1,6 @@
 #include "EaseSineIn.h"
 #include "EaseSineOut.h"
+USING_NS_OFXACTIONS;
 
 EaseSineIn::EaseSineIn()
 {

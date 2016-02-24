@@ -1,5 +1,6 @@
 #include "EaseElastic.h"
 #include "ofLog.h"
+USING_NS_OFXACTIONS;
 
 bool EaseElastic::initWithAction(ActionInterval *action, float period/* = 0.3f*/)
 {

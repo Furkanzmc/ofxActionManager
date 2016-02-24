@@ -2,6 +2,8 @@
 #define SCALEACTION_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class ScaleTo
  @brief Scales a ActionTarget object to a zoom factor by modifying it's scale attribute.
  @warning This action doesn't support "reverse".
@@ -140,5 +142,6 @@ private:
     DISALLOW_COPY_AND_ASSIGN(ScaleBy);
 };
 
+OFXACTIONS_NS_END
 
 #endif // SCALEACTION_H

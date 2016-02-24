@@ -2,6 +2,8 @@
 #define REPEATACTION_H
 #include "ActionInterval.h"
 
+OFXACTIONS_NS_BEGIN
+
 /** @class Repeat
  * @brief Repeats an action a number of times.
  * To repeat an action forever use the RepeatForever action.
@@ -134,4 +136,7 @@ protected:
 private:
     DISALLOW_COPY_AND_ASSIGN(RepeatForever);
 };
+
+OFXACTIONS_NS_END
+
 #endif // REPEATACTION_H

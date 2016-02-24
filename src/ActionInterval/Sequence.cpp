@@ -1,5 +1,6 @@
 #include "Sequence.h"
 #include "ofLog.h"
+USING_NS_OFXACTIONS;
 
 Sequence::Sequence()
 {

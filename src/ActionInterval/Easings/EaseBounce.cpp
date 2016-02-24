@@ -1,5 +1,6 @@
 #include "EaseBounce.h"
 #include "ofLog.h"
+USING_NS_OFXACTIONS;
 
 //
 // EaseBounce
