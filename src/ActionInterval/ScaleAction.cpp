@@ -1,6 +1,5 @@
 #include "ScaleAction.h"
 #include "ofLog.h"
-USING_NS_OFXACTIONS;
 
 //
 // ScaleTo

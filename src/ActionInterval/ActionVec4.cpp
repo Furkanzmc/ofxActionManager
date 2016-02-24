@@ -1,5 +1,4 @@
 #include "ActionVec4.h"
-USING_NS_OFXACTIONS;
 
 ActionVec4::ActionVec4()
     : m_Value(nullptr)

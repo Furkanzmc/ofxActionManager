@@ -1,5 +1,4 @@
 #include "EaseQuadratic.h"
-USING_NS_OFXACTIONS;
 
 //
 // EaseQuadraticActionIn

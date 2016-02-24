@@ -1,6 +1,5 @@
 #include "MoveAction.h"
 #include "ofLog.h"
-USING_NS_OFXACTIONS;
 
 // MoveBy
 

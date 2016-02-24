@@ -1,6 +1,5 @@
 #include "ActionInstant.h"
 #include "ofLog.h"
-USING_NS_OFXACTIONS;
 
 ActionInstant *ActionInstant::clone() const
 {

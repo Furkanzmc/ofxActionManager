@@ -1,5 +1,4 @@
 #include "EaseBezierAction.h"
-USING_NS_OFXACTIONS;
 
 EaseBezierAction *EaseBezierAction::create(ActionInterval *action)
 {

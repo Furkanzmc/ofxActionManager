@@ -1,5 +1,4 @@
 #include "CallFunc.h"
-USING_NS_OFXACTIONS;
 
 //
 // CallFunc

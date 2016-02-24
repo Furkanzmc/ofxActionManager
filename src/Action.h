@@ -36,7 +36,6 @@ THE SOFTWARE.
 #define SAFE_RELEASE(p) do { if(p) { (p)->release(); (p) = nullptr; } } while(0)
 #define OFXACTIONS_NS_BEGIN namespace ofxActions {
 #define OFXACTIONS_NS_END }
-#define USING_NS_OFXACTIONS using namespace ofxActions
 
 OFXACTIONS_NS_BEGIN
 
@@ -253,6 +252,6 @@ private:
 OFXACTIONS_NS_END
 
 //For making sure we can use actions without using the ofxActions namespace
-USING_NS_OFXACTIONS;
+using namespace ofxActions;
 
 #endif // ACTION_H

@@ -3,7 +3,7 @@
 #ifndef M_PI_X_2
 #define M_PI_X_2 (float)M_PI * 2.0f
 #endif
-USING_NS_OFXACTIONS;
+
 
 ActionEase::ActionEase()
 {

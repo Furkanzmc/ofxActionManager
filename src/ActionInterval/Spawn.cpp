@@ -2,7 +2,6 @@
 #include "Sequence.h"
 #include "DelayTime.h"
 #include "ofLog.h"
-USING_NS_OFXACTIONS;
 
 //
 // Spawn

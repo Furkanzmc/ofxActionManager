@@ -1,6 +1,5 @@
 #include "FadeAction.h"
 #include "ofLog.h"
-USING_NS_OFXACTIONS;
 
 //
 // FadeIn

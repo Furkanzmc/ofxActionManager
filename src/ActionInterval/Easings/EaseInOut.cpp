@@ -1,5 +1,4 @@
 #include "EaseInOut.h"
-USING_NS_OFXACTIONS;
 
 EaseInOut::EaseInOut()
 {

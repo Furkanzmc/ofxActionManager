@@ -1,7 +1,6 @@
 #include "RepeatAction.h"
 #include "ActionInstant.h"
 #include "ofLog.h"
-USING_NS_OFXACTIONS;
 
 //
 // Repeat

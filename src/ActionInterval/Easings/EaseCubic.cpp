@@ -1,5 +1,4 @@
 #include "EaseCubic.h"
-USING_NS_OFXACTIONS;
 
 //
 // EaseCubicActionIn

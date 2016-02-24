@@ -1,5 +1,4 @@
 #include "EaseQuartic.h"
-USING_NS_OFXACTIONS;
 
 //
 // EaseQuarticActionIn

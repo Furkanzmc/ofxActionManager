@@ -1,5 +1,4 @@
 #include "EaseCircle.h"
-USING_NS_OFXACTIONS;
 
 //
 // EaseCircleActionIn
