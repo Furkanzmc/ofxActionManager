@@ -27,7 +27,7 @@ ActionManager::ActionManager()
     , m_IsCurrentTargetSalvaged(false)
     , m_IsAutoUpdating(false)
 {
-
+    startAutoUpdate();
 }
 
 ActionManager::~ActionManager()
@@ -47,7 +47,6 @@ ActionManager *ActionManager::getInstance()
 
 void ActionManager::startAutoUpdate()
 {
-
     if (!m_IsAutoUpdating) {
         m_IsAutoUpdating = true;
         ofAddListener(ofEvents().update, this, &ActionManager::autoUpdate);
