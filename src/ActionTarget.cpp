@@ -24,6 +24,9 @@ const ofVec3f &ActionTarget::getPosition() const
 void ActionTarget::setPosition(const ofVec3f &positon)
 {
     m_Position = positon;
+    if (onPositionChanged) {
+        onPositionChanged(m_Position);
+    }
 }
 
 const ofVec3f &ActionTarget::getScale() const
@@ -34,6 +37,9 @@ const ofVec3f &ActionTarget::getScale() const
 void ActionTarget::setScale(const ofVec3f &scale)
 {
     m_Scale = scale;
+    if (onScaleChanged) {
+        onScaleChanged(m_Scale);
+    }
 }
 
 const ofVec3f &ActionTarget::getRotation() const
@@ -44,6 +50,9 @@ const ofVec3f &ActionTarget::getRotation() const
 void ActionTarget::setRotation(const ofVec3f &rotation)
 {
     m_Rotation = rotation;
+    if (onRotationChanged) {
+        onRotationChanged(m_Rotation);
+    }
 }
 
 const ofColor &ActionTarget::getColor() const
@@ -54,6 +63,9 @@ const ofColor &ActionTarget::getColor() const
 void ActionTarget::setColor(const ofColor &color)
 {
     m_Color = color;
+    if (onColorChanged) {
+        onColorChanged(m_Color);
+    }
 }
 
 GLubyte ActionTarget::getOpacity() const
@@ -64,6 +76,9 @@ GLubyte ActionTarget::getOpacity() const
 void ActionTarget::setOpacity(GLubyte alpha)
 {
     m_Color.a = alpha;
+    if (onOpacityChanged) {
+        onOpacityChanged(m_Color.a);
+    }
 }
 
 void ActionTarget::runAction(Action *action)
@@ -112,6 +127,9 @@ bool ActionTarget::isVisible() const
 void ActionTarget::setVisible(bool visible)
 {
     m_IsVisible = visible;
+    if (onVisibilityChanged) {
+        onVisibilityChanged(m_IsVisible);
+    }
 }
 
 unsigned int ActionTarget::getReferenceCount() const

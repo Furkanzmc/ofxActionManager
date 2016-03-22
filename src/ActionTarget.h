@@ -11,6 +11,15 @@ class Action;
 class ActionTarget
 {
 public:
+    std::function<void(const ofVec3f &)> onPositionChanged;
+    std::function<void(const ofVec3f &)> onScaleChanged;
+    std::function<void(const ofVec3f &)> onRotationChanged;
+
+    std::function<void(const ofColor &)> onColorChanged;
+    std::function<void(const GLubyte &)> onOpacityChanged;
+    std::function<void(bool)> onVisibilityChanged;
+
+public:
     ActionTarget();
     virtual ~ActionTarget();
 
