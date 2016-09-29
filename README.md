@@ -5,15 +5,25 @@ The usage is pretty much the same as Cocos2dx. The only difference is All the ac
 You can read about actions [here](http://www.cocos2d-x.org/wiki/Actions)
 
 ```C++
+ofApp.h =>
+class ofApp : public ofBaseApp{
+
+	public:
+		...
+
+		ActionTarget target;
+};
+
+ofApp.cpp =>
 void ofApp::update()
 {
     const float delta = ofGetLastFrameTime();
-    ActionManager::getInstance()->update(delta);
+    ActionManager::getInstance()->updateActions(delta);
 }
 
 void ofApp::draw()
 {
-    ofCircle(target.getPositon(), 20);
+    ofCircle(target.getPosition(), 20);
 }
 
 void ofApp::mouseReleased(int x, int y, int button)
@@ -21,7 +31,7 @@ void ofApp::mouseReleased(int x, int y, int button)
     auto seq = Sequence::create(EaseBounceOut::create(MoveTo::create(1, ofVec2f(x, y))), CallFunc::create([]() {
             std::cout << "Hey Sequence!\n";
         }), nullptr);
-    m_Target.runAction(seq);
+    target.runAction(seq);
 }
 ```
 
